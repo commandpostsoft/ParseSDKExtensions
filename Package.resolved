@@ -19,15 +19,6 @@
       }
     },
     {
-      "identity" : "modernistik",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/modernistik/Modernistik.git",
-      "state" : {
-        "revision" : "1f5cb9933d5d34b79dab5ae8e0f22cb4f710cb5c",
-        "version" : "0.7.2"
-      }
-    },
-    {
       "identity" : "parse-sdk-ios-osx",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/parse-community/Parse-SDK-iOS-OSX.git",

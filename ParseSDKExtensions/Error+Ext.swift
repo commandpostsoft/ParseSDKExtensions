@@ -11,7 +11,7 @@ extension Error {
     /// Returns `true` if the error is a Parse cache miss (120) error.
     /// See `PFErrorCode.errorCacheMiss`
     public var isCacheMiss: Bool {
-        return code == kPFErrorCacheMiss
+        return code == PFErrorCode.errorCacheMiss.rawValue
     }
 
     /**
@@ -54,25 +54,25 @@ extension Error {
     /// to view the object due to ACLs.
     /// See `PFErrorCode.errorObjectNotFound`
     public var isObjectNotFound: Bool {
-        return code == kPFErrorObjectNotFound && domain == "Parse"
+        return code == PFErrorCode.errorObjectNotFound.rawValue && domain == "Parse"
     }
 
     /// Returns `true` if this is a connection failure when connected to Parse server.
     /// See `PFErrorCode.errorConnectionFailed`
     public var isOffline: Bool {
-        return code == kPFErrorConnectionFailed && domain == "Parse"
+        return code == PFErrorCode.errorConnectionFailed.rawValue && domain == "Parse"
     }
 
     /// Cloud code script or hook had an error (Ex. before save hook fails)
     /// See `PFErrorCode.scriptError`
     public var isScriptError: Bool {
-        return code == kPFScriptError && domain == "Parse"
+        return code == PFErrorCode.scriptError.rawValue && domain == "Parse"
     }
 
     /// Returns `true` if this is a Parse validation error.
     /// See `PFErrorCode.validationError`
     public var isValidationError: Bool {
-        return code == kPFValidationError && domain == "Parse"
+        return code == PFErrorCode.validationError.rawValue && domain == "Parse"
     }
 
     /**
@@ -90,10 +90,10 @@ extension Error {
             // bad json - usually heroku app misconfigured, which returns HTML instead of Parse JSON
             return true
         }
-        guard domain == "Parse" else { return false }
+        guard domain == "Parse", let errorCode = PFErrorCode(rawValue: code) else { return false }
 
-        switch code {
-        case kPFErrorInternalServer, kPFErrorConnectionFailed, kPFErrorTimeout, kPFErrorRequestLimitExceeded, kPFErrorExceededQuota:
+        switch errorCode {
+        case .errorInternalServer, .errorConnectionFailed, .errorTimeout, .errorRequestLimitExceeded, .errorExceededQuota:
             return true
         default:
             return false
@@ -105,7 +105,7 @@ extension Error {
     /// for the user has expired or has been revoked in Parse.
     /// When this happens, the current user should be logged out of the app.
     public var isSessionError: Bool {
-        return code == kPFErrorInvalidSessionToken || code == kPFErrorUserCannotBeAlteredWithoutSession
+        return code == PFErrorCode.errorInvalidSessionToken.rawValue || code == PFErrorCode.errorUserCannotBeAlteredWithoutSession.rawValue
     }
 
     /// Return the error code.

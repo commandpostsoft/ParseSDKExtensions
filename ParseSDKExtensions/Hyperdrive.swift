@@ -3,7 +3,6 @@
 //  Copyright © 2016 Modernistik LLC. All rights reserved.
 //
 
-import Modernistik
 import ParseCore
 
 /// Alias to block type `PFIdResultBlock` with signature `(result,error)`.
@@ -45,11 +44,14 @@ public typealias Query = PFQuery
 /// Alias to `PFGeoPoint`
 public typealias GeoPoint = PFGeoPoint
 
-/// Alias to `PFFile`
-public typealias RemoteFile = PFFile
+/// Alias to `PFFileObject`
+public typealias RemoteFile = PFFileObject
 
 /// Alias for `[String: Any]`
 public typealias Params = [String: Any]
+
+/// Alias to `PFBooleanResultBlock` with signature `(Bool, Error?)`.
+public typealias ResultBlock = PFBooleanResultBlock
 
 /**
  Protocol that defines an clean interface with interacting with Modernistik Hyperdrive server.
@@ -192,7 +194,7 @@ extension Hyperdrive {
     /// - Parameter completion: A completion handler when the fetch has been completed.
     public static func updateConfiguration(completion: ResultBlock? = nil) {
         PFConfig.getInBackground { (config, error) -> Void in
-            completion?(error)
+            completion?(error == nil, error)
             guard error == nil else { return }
             NotificationCenter.default.post(name: .HyperdriveConfigUpdatedNotification, object: config, userInfo: nil)
         }
