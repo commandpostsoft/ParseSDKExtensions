@@ -30,7 +30,7 @@ public protocol TimeZoneAccessible: AnyObject {
     /// A location property that returns the geopoint.
     var location: PFGeoPoint? { get }
     /// Returns the time zone, either from the stored object, or best-effort
-    /// from either `TimeZoneLocate` database or `CLGeocoder`.
+    /// from either `TimeZoneLocate` database or `CLGeocoder`.sor
     var timeZone: TimeZone { get set }
 }
 

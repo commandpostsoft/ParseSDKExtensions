@@ -30,11 +30,11 @@ mobile applications with the Parse-SDK-iOS-OSX.
   # s.social_media_url = 'https://twitter.com/modernistik'
 
   s.swift_version = '5.0'
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '11.0'
 
-  s.dependency 'Modernistik', '~> 0.5'
-  s.dependency 'Parse', '>= 1.17.2'
-  s.dependency 'TimeZoneLocate', '>= 0.4'
+  s.dependency 'Modernistik', '~> 0.7.2'
+  s.dependency 'Parse', '~> 5.1.1'
+  s.dependency 'TimeZoneLocate', '>= 0.4.2'
 
   s.source_files = 'ParseSDKExtensions/**/*'
 
