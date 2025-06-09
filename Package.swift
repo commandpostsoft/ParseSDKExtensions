@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "ParseSDKExtensions",
     platforms: [
-        .iOS(.v11),
+        .iOS(.v15),
         .macOS(.v10_15)
     ],
     products: [
