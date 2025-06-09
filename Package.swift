@@ -23,7 +23,7 @@ let package = Package(
         .target(
             name: "ParseSDKExtensions",
             dependencies: [
-                .product(name: "ParseObjC", package: "Parse-SDK-iOS-OSX"),
+                .product(name: "ParseCore", package: "Parse-SDK-iOS-OSX"),
                 .product(name: "Modernistik", package: "Modernistik"),
                 .product(name: "TimeZoneLocate", package: "TimeZoneLocate")
             ],

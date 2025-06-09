@@ -5,7 +5,7 @@
 //  Created by Anthony Persaud on 1/4/18.
 //
 
-import Parse
+import ParseCore
 
 extension Error {
     /// Returns `true` if the error is a Parse cache miss (120) error.

@@ -4,7 +4,7 @@
 //
 //  Created by Anthony Persaud on 1/4/18.
 //
-import Parse
+import ParseCore
 import TimeZoneLocate
 
 /**

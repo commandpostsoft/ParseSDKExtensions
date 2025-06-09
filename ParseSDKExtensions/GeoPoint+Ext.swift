@@ -5,7 +5,7 @@
 //  Created by Anthony Persaud on 1/4/18.
 //
 
-import Parse
+import ParseCore
 
 extension CLLocationCoordinate2D {
     /// Returns a geoPoint object from this location.

@@ -5,7 +5,7 @@
 //  Created by Anthony Persaud on 1/4/18.
 //
 
-import Parse
+import ParseCore
 
 extension PFACL {
     public func setAccessFor(user: PFUser?, read: Bool = true, write: Bool = false) {

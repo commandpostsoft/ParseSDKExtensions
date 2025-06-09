@@ -3,7 +3,7 @@
 //  Copyright © 2016 Modernistik LLC. All rights reserved.
 //
 
-import Parse
+import ParseCore
 import TimeZoneLocate
 
 extension PFObject {

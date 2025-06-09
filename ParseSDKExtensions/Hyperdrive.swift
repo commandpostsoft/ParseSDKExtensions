@@ -4,7 +4,7 @@
 //
 
 import Modernistik
-import Parse
+import ParseCore
 
 /// Alias to block type `PFIdResultBlock` with signature `(result,error)`.
 public typealias FunctionResultBlock = PFIdResultBlock
