@@ -46,7 +46,7 @@ public typealias Query = PFQuery
 public typealias GeoPoint = PFGeoPoint
 
 /// Alias to `PFFile`
-public typealias RemoteFile = PFFileObject
+public typealias RemoteFile = PFFile
 
 /// Alias for `[String: Any]`
 public typealias Params = [String: Any]
