@@ -14,7 +14,7 @@ let package = Package(
             targets: ["ParseSDKExtensions"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/parse-community/Parse-SDK-iOS-OSX.git", from: "5.1.1"),
+        .package(url: "https://github.com/netreconlab/Parse-Swift.git", from: "5.12.3"),
         .package(url: "https://github.com/modernistik/Modernistik.git", from: "0.7.2"),
         .package(url: "https://github.com/commandpostsoft/TimeZoneLocate.git", branch: "main")
     ],
@@ -22,7 +22,7 @@ let package = Package(
         .target(
             name: "ParseSDKExtensions",
             dependencies: [
-                .product(name: "ParseObjC", package: "parse-sdk-ios-osx"),
+                .product(name: "ParseSwift", package: "Parse-Swift"),
                 .product(name: "Modernistik", package: "Modernistik"),
                 .product(name: "TimeZoneLocate", package: "TimeZoneLocate")
             ],
