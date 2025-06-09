@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/commandpostsoft/TimeZoneLocate.git",
       "state" : {
-        "branch" : "main",
-        "revision" : "23306e7e5d92ec630947364edf90246399220d21"
+        "revision" : "23306e7e5d92ec630947364edf90246399220d21",
+        "version" : "0.4.2"
       }
     }
   ],

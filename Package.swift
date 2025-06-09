@@ -6,7 +6,8 @@ import PackageDescription
 let package = Package(
     name: "ParseSDKExtensions",
     platforms: [
-        .iOS(.v11)
+        .iOS(.v11),
+        .macOS(.v10_15)
     ],
     products: [
         .library(
@@ -16,7 +17,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/netreconlab/Parse-Swift.git", from: "5.12.3"),
         .package(url: "https://github.com/modernistik/Modernistik.git", from: "0.7.2"),
-        .package(url: "https://github.com/commandpostsoft/TimeZoneLocate.git", branch: "main")
+        .package(url: "https://github.com/commandpostsoft/TimeZoneLocate.git", from: "0.4.2")
     ],
     targets: [
         .target(
